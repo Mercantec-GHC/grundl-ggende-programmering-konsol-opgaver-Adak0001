@@ -1,13 +1,34 @@
-﻿using System.Runtime.InteropServices;
-
-Console.WriteLine("Hello, World");
-Console.WriteLine("This is the first line.");
-Console.WriteLine("This is the second line.");
-Console.WriteLine("b");
+﻿Console.WriteLine("Hello, World!");
+Console.WriteLine('b');
 Console.WriteLine(123);
 Console.WriteLine(0.25F);
-Float Type    Precision
-----------------------------
-float         ~6-9 digits
-double        ~15-17 digits
-decimal        28-29 digits
+Console.WriteLine(2.625);
+Console.WriteLine(12.39816m);
+Console.WriteLine(true);
+Console.WriteLine(false);
+Console.WriteLine("123");
+Console.WriteLine(123);
+Console.WriteLine("true");
+Console.WriteLine(true);
+string firstName;
+firstName = "Bob";
+Console.WriteLine(firstName);
+firstName = "Liem";
+Console.WriteLine(firstName);
+firstName = "Isabella";
+Console.WriteLine(firstName);
+firstName = "Yasmin";
+Console.WriteLine(firstName);
+Console.WriteLine(3);
+Console.WriteLine("34,4");
+string name = "Bob";
+int messages = 3;
+decimal temperature = 34.4m;
+Console.Write("Hello, ");
+Console.Write(name);
+Console.Write("! You have ");
+Console.Write(messages);
+Console.Write(" messages in your inbox. The temperature is ");
+Console.Write(temperature);
+Console.Write(" celsius.");
+Console.WriteLine(34.40M);
