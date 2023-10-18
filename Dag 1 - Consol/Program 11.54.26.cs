@@ -31,7 +31,7 @@ Console.Write(messages);
 Console.Write(" messages in your inbox. The temperature is ");
 Console.Write(temperature);
 Console.Write(" celsius.");
-Console.WriteLine(34.40M);Console.WriteLine(34.40M);
+Console.WriteLine(34.40M);
 Console.WriteLine("Hello\nWorld!");
 Console.WriteLine("Hello\tWorld!");
 Console.WriteLine("Hello \"World\"!");
