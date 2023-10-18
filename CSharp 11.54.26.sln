@@ -51,6 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag 6.3 - Challenge project
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag 6.1 - ConsoleApp - Debugging", "Dag 6.1 - ConsoleApp - Debugging\Dag 6.1 - ConsoleApp - Debugging.csproj", "{2BA19484-B5AF-4141-BEF4-15E76B56D26E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4BAED483-3985-4685-A0D5-D5771CDD9BDB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
