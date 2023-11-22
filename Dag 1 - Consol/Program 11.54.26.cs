@@ -1,4 +1,16 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Hello World!");
+Console.Write("Congratulations!");
+Console.Write(" ");
+Console.Write("You wrote your first lines of code.\n");
+
+Console.WriteLine("This is the first line.");
+Console.WriteLine("This is the second line.");
+
+Console.Write("This is ");
+Console.Write("the second ");
+Console.Write("line.");
+
+
 Console.WriteLine('b');
 Console.WriteLine(123);
 Console.WriteLine(0.25F);
