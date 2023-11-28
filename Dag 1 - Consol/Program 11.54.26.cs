@@ -236,6 +236,15 @@ Console.WriteLine($@"C:\Output\{projectNName}\Data");
 //while the @ symbol allows you to use the unescaped \ character.
 
 
+// Set console output encoding to UTF-8
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+// Unicode greeting message
+string unicodeGreeting = "Hello สวัสดี こんにちは Здравствуйте";
+
+// Display the greeting
+Console.WriteLine(unicodeGreeting);
+
 //"følgende som jeg har skrivet"
 
 string projectName = "ACME";
@@ -269,11 +278,46 @@ Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
  */
 
 
+
+/*
+In this instance, the C# compiler understands what you're attempting to do. 
+The compiler parses your code and sees that the + (the operator) is surrounded by two numeric values (the operands). 
+Given the data types of the variables (both are ints), it figures out that you intended to add those two values.
+ */
 int firstNumber = 12;
 int secondNumber = 7;
 Console.WriteLine(firstNumber + secondNumber);
+
+
+/*
+In this case, the C# compiler understands that you want to use the + symbol to concatenate the two operands. 
+It deduces this because the + symbol is surrounded by operands of string and int data types. 
+So, it attempts to implicitly convert the int variable widgetsSold into a string temporarily so it can concatenate it to the rest of the string.
+The parentheses symbol () becomes another overloaded operator. In this case, the opening and closing parentheses form the order of operations operator, just like you might use in a mathematical formula. 
+You indicate that you want the inner-most parentheses resolved first resulting in the addition of int values widgetsSold and the value 7. 
+Once that is resolved, then it will implicitly convert the result to a string so that it can be concatenated with the rest of the message.
+ */
 int widgetsSold = 7;
 Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
+int widgettsSold = 7;
+Console.WriteLine(firstName + " sold " + (widgettsSold + 7) + " widgets.");
+
+/*
+Recap
+
+You can perform mathematical-like addition operations on numbers.
+Both string concatenation and addition use the plus + symbol. This is called overloading an operator, and the compiler infers the proper use based on the data types it's operating on.
+When it can, the C# compiler will implicitly convert an int into a string if it's obvious that the developer is trying to concatenate the string representation of a number for presentation purposes.
+Use parentheses to define an order of operations to explicitly tell the compiler that you want to perform certain operations before other operations.
+
++ is the addition operator
+- is the subtraction operator
+* is the multiplication operator
+/ is the division operator
+ */
+
+
+
 int sum = 7 + 5;
 int difference = 7 - 5;
 int product = 7 * 5;
@@ -282,14 +326,61 @@ Console.WriteLine("Sum: " + sum);
 Console.WriteLine("Difference: " + difference);
 Console.WriteLine("Product: " + product);
 Console.WriteLine("Quotient: " + quotient);
+
+decimal sayi1 = 7.0m;
+int sayi2 = 5;
+Console.WriteLine(sayi1 / sayi2);
+
 decimal decimalQuotient = 7.0m / 5;
 Console.WriteLine($"Decimal quotient: {decimalQuotient}");
+
+
+/*
+Write code to determine the remainder after integer division
+The modulus operator % tells you the remainder of int division. What you really learn from this is whether one number is divisible by another. 
+This can be useful during long processing operations when looping through hundreds or thousands of data records and you want to provide feedback to the end user after every 100 data records have been processed.
+*/
 Console.WriteLine($"Modulus of 200 / 5 : {200 % 5}");
 Console.WriteLine($"Modulus of 7 / 5 : {7 % 5}");
+
+
+
 int value1 = 3 + 4 * 5;
 int value2 = (3 + 4) * 5;
 Console.WriteLine(value1);
 Console.WriteLine(value2);
+/*
+Recap
+Here's what you've learned so far about mathematical operations in C#:
+
+Use operators like +, -, *, and / to perform basic mathematical operations.
+The division of two int values will result in the truncation of any values after the decimal point. 
+To retain values after the decimal point, you need to cast the divisor or dividend (or both) from int into a floating point number like decimal first, -
+then the quotient must be of the same floating point type as well in order to avoid truncation.
+Perform a cast operation to temporarily treat a value as if it were a different data type.
+Use the % operator to capture the remainder after division.
+The order of operations will follow the rules of the acronym PEMDAS.
+*/
+
+
+/*
+Increment and decrement
+Frequently, you'll need to increment and/or decrement values, especially when you're writing looping logic or code that interacts with a data structure.
+
+The += operator adds and assigns the value on the right of the operator to the value on the left of the operator. 
+So, lines two and three in the following code snippet are the same:
+int value = 0;     // value is now 0.
+value = value + 5; // value is now 5.
+value += 5;        // value is now 10.
+
+The ++ operator increments the value of the variable by 1. So, lines two and three in the following code snippet are the same:
+int value = 0;     // value is now 0.
+value = value + 1; // value is now 1.
+value++;           // value is now 2.
+
+*/
+
+
 int value = 1;
 
 value = value + 1;
@@ -315,12 +406,36 @@ Console.WriteLine("First: " + value);
 Console.WriteLine($"Second: {value++}");
 Console.WriteLine("Third: " + value);
 Console.WriteLine("Fourth: " + (++value));
+/*
+ Note
+In the "second increment", you used value += 1;. 
+However you could have used any literal int value (or a variable) to increment that amount. 
+The same holds true for the "second decrement": value -= 1;.
+
+Increment the value.
+Retrieve the new incremented value of the variable value and use that in the string operation.
+While not strictly necessary, you added parenthesis around the expression (++value) to improve readability. 
+Seeing so many + operators next to each other seems like it could be misunderstood by other developers. Stylistic decisions like this are subjective. 
+However, since you'll write the code once but read it many times, you should prioritize readability.
+
+Recap
+Here's what you've learned so far about mathematical operations in C#:
+
+Use compound assignment operators like +=, -=, *=, ++, and -- to perform a mathematical operation like increment or decrement, then assign the result into the original variable.
+Increment and decrement operators perform differently depending on whether the operator is before or after the operand.
+
+*/
+
+
+
 
 int fahrenheit = 94;
 
 double celsius = (fahrenheit - 32) * 5.0 / 9.0;
 
 Console.WriteLine($"The temperature is {celsius:F1} Celsius.");
+
+
 int first = 0;
 Console.WriteLine(first);
 Console.ReadLine();
