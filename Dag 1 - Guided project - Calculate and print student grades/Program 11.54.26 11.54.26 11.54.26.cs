@@ -1,41 +1,41 @@
 ﻿int currentAssignments = 5;
 
-int sophia1 = 93;
-int sophia2 = 87;
-int sophia3 = 98;
-int sophia4 = 95;
-int sophia5 = 100;
+int sophia11 = 93;
+int sophia12 = 87;
+int sophia13 = 98;
+int sophia14 = 95;
+int sophia15 = 100;
 
-int nicolas1 = 80;
-int nicolas2 = 83;
-int nicolas3 = 82;
-int nicolas4 = 88;
-int nicolas5 = 85;
+int nicolas11 = 80;
+int nicolas12 = 83;
+int nicolas13 = 82;
+int nicolas14 = 88;
+int nicolas15 = 85;
 
-int zahirah1 = 84;
-int zahirah2 = 96;
-int zahirah3 = 73;
-int zahirah4 = 85;
-int zahirah5 = 79;
+int zahira11 = 84;
+int zahira12 = 96;
+int zahira13 = 73;
+int zahira14 = 85;
+int zahira15 = 79;
 
-int jeong1 = 90;
-int jeong2 = 92;
-int jeong3 = 98;
-int jeong4 = 100;
-int jeong5 = 97;
+int jeong11 = 90;
+int jeong12 = 96;
+int jeong13 = 98;
+int jeong14 = 100;
+int jeong15 = 97;
 
-int sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
-int nicolasSum = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
-int zahirahSum = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
-int jeongSum = jeong1 + jeong2 + jeong3 + jeong4 + jeong5;
+int SophiaTotal = sophia11 + sophia12 + sophia13 + sophia14 + sophia15;
+int NicolasTotal = nicolas11 + nicolas12 + nicolas13 + nicolas14 + nicolas15;
+int ZahiraTotal = zahira11 + zahira12 + zahira13 + zahira14 + zahira15;
+int JeongTotal = jeong11 + jeong12 + jeong13 + jeong14 + jeong15;
 
-decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
-decimal nicolasScore = (decimal)nicolasSum / currentAssignments;
-decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
-decimal jeongScore = (decimal)jeongSum / currentAssignments;
+decimal SophiaScore = (decimal)SophiaTotal / currentAssignments;
+decimal NicolasScore = (decimal)NicolasTotal / currentAssignments;
+decimal ZahiraScore = (decimal)ZahiraTotal / currentAssignments;
+decimal JeongScore = (decimal)JeongTotal / currentAssignments;
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
-Console.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
-Console.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
-Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
+Console.WriteLine("Student\t\tTotal\tScore\tGrade\n");
+Console.WriteLine("Sophia\t\t" + SophiaTotal + "\t" + SophiaScore + "\tA");
+Console.WriteLine("Nicolas\t\t" + NicolasTotal + "\t" + NicolasScore + "\tB");
+Console.WriteLine("Zahira\t\t" + ZahiraTotal + "\t" + ZahiraScore + "\tB");
+Console.WriteLine("Jeong\t\t" + JeongTotal + "\t" + JeongScore + "\tA");
