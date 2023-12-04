@@ -191,7 +191,7 @@ string message = "Hello " + firstName;
 Console.WriteLine(message);
 string greeting = "Hello";
 string _ = greeting + " " + firstName + "!";
-Console.WriteLine(message);
+Console.WriteLine(greeting);
 
 /*
 To interpolate two strings together, you create a literal string and prefix the string with the $ symbol. 
